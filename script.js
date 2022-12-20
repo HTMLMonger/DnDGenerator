@@ -48,9 +48,10 @@ function randomize() {
   //
   //
   //
+
   async function fetchData(url) {
     try {
-      const response = await fetch(url);
+      const response = await fetch("../names.json");
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -87,7 +88,7 @@ function randomize() {
     }
   }
   (async () => {
-    const meta = await generateName("male");
+    const meta = await generateName("male" & "female");
     document.getElementById("nameid").innerHTML = meta;
   })();
 
