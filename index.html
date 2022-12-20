@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Dungeons & Dragons Random Character Creation Tool</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">D&D Tools</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="container-sm text-center">
+      Dungeons & Dragons Random Character Creation
+    </h1>
+    <div class="container text-center mt-4 mb-5">
+      <button type="button" class="btn btn-success text-center"  onclick="randomize()">
+        Randomize
+      </button>
+    </div>
+
+    <div class="container text-center"><h3>Characteristics</h3></div>
+    <div class="container pt-4 pb-4 ">
+      <div class="row">
+        <div class="col-6 text-center">
+          Name:
+        </div>
+        <div class="col-6 text-center">
+          Level:
+        </div>
+
+      </div> 
+      <div class="row">
+        <div id="nameid" value="nameid" class="col-6 text-center">...</div>
+        <div id="levelid" value="levelid" class="col-6 text-center">...</div>
+      </div>
+    </div>
+
+<div class="container pt-3 pb-4">
+  <div class="row">
+    <div class="col text-center">
+      Race:
+    </div>
+    <div class="col text-center">
+      Alignment:
+    </div>
+    <div class="col text-center">
+      Class: 
+    </div>
+  </div> 
+
+  <div class="row ">
+    <div id="raceid" value="raceid" class="col text-center">...</div>
+    <div id="alignid" value="alignid" class="col text-center">...</div>
+    <div id="classid" value="classid" class="col text-center">...</div>
+  </div>
+</div>
+<hr>
+<div class="container text-center"><h3>Stats</h3></div>
+
+    <div class="container pt-3 pb-4">
+      <div class="row">
+        <div class="col text-center">
+          Health:
+        </div>
+        <div class="col text-center">
+          Stamina:
+        </div>
+        <div class="col text-center ">Mana:</div>
+      </div>
+      <div class="row ">
+
+        <div id="healid" value="healid" class="col text-center">...</div>
+        <div id="stamid" value="stamid" class="col text-center">...</div>
+        <div id="manaid" value="manaid" class="col text-center">...</div>
+
+      </div>
+    </div>
+    <hr>
+    <div class="container text-center"><h3>Saving Throws</h3></div>
+    
+        <div class="container pt-3 pb-4">
+          <div class="row">
+            <div class="col text-center">
+              Strength:
+            </div>
+            <div class="col text-center">
+              Dexterity:
+            </div>
+            <div class="col text-center ">
+              Constitution:
+            </div>
+            
+          </div>
+          <div class="row ">
+    
+            <div id="strengthid" value="strengthid" class="col text-center">...</div>
+            <div id="dextid" value="dextid" class="col text-center">...</div>
+            <div id="constid" value="constid" class="col text-center">...</div>
+    
+          </div>
+          <div class="row pt-5">
+            <div class="col text-center">
+              Inteligence:
+            </div>
+            <div class="col text-center">
+              Wisdom:
+            </div>
+            <div class="col text-center ">
+              Charisma:
+            </div>
+            
+          </div>
+         
+          <div class="row ">
+    
+            <div id="intelid" value="intelid" class="col text-center">...</div>
+            <div id="wisdid" value="wisdid" class="col text-center">...</div>
+            <div id="charid" value="charid" class="col text-center">...</div>
+    
+          </div>
+        </div>
+    <hr>
+    <div class="container text-center"><h3>Skills</h3></div>
+
+    <div class="container pt-3">
+      <div class="row">
+        <div class="col-4 text-center">Acrobatics:</div>
+        <div class="col-4 text-center">Animal Handling:</div>
+        <div class="col-4 text-center">Arcana:</div>
+
+      </div>
+      <div class="row">
+
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+      </div>
+    </div>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-4 text-center">Athletics:</div>
+        <div class="col-4 text-center">Deception:</div>
+        <div class="col-4 text-center">History:</div>
+
+      </div>
+      <div class="row">
+    
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+      </div>
+    </div>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-4 text-center">Insight:</div>
+        <div class="col-4 text-center">Intimidation</div>
+        <div class="col-4 text-center">Investigation:</div>
+
+      </div>
+      <div class="row">
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+      </div>
+    </div>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-4 text-center">Medicine:</div>
+        <div class="col-4 text-center">Nature:</div>
+        <div class="col-4 text-center">Perception:</div>
+
+      </div>
+      <div class="row">
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+        <div class="col-4 text-center">...</div>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-4 text-center">Performance:</div>
+      <div class="col-4 text-center">Persuasion:</div>
+      <div class="col-4 text-center">Religion</div>
+    </div>   
+     <div class="row">
+      <div class="col-4 text-center">...</div>
+      <div class="col-4 text-center">...</div>
+      <div class="col-4 text-center">...</div>
+    </div>
+  </div>
+  <div class="container pt-5 pb-5">
+    <div class="row">
+      <div class="col-4 text-center">Sleight of Hand</div>
+      <div class="col-4 text-center">Stealth</div>
+      <div class="col-4 text-center">Survival</div>
+    </div>    
+    <div class="row">
+      <div class="col-4 text-center">...</div>
+      <div class="col-4 text-center">...</div>
+      <div class="col-4 text-center">...</div>
+  
+    </div>
+  </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
