@@ -12054,6 +12054,7 @@ function randomize() {
   //
   //
   //
+     // Attempt to make use of an api but still in construction.
 
   // async function fetchData(url) {
   //   try {
@@ -12229,6 +12230,7 @@ function randomize() {
       stats[randomStat] += 1;
       points -= 1;
     }
+    //Display stats in DOM
     document.getElementById("acroid").innerHTML = stats.acrobatics;
     document.getElementById("animid").innerHTML = stats.animalHandling;
     document.getElementById("arcid").innerHTML = stats.arcana;
