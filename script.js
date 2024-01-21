@@ -12129,43 +12129,50 @@ function randomize() {
 
   //Create Random Health value
 
-  let health = Math.floor(Math.random() * 20) * 10 + 100;
+  let health = Math.floor(Math.random() * 15);
+  if(health <= 3){
+    health = Math.floor(Math.random() * 15)
+  }
   document.getElementById("healid").innerHTML = health;
 
   //Re adjust health based on character level
   let incrementh = 0;
   for (let chlevel = 0; chlevel < 21; chlevel++) {
-    incrementh = incrementh + 0.5;
+    incrementh = incrementh + 1;
   }
-  health = health * incrementh;
 
   document.getElementById("healid").innerHTML = health;
   console.log("Random Health Generated" + " " + health);
 
   //Create Random Stamina value
-  let stamina = Math.floor(Math.random() * 20) * 10 + 100;
+  let stamina = Math.floor(Math.random() * 15);
+  if(stamina <= 3){
+    stamina = Math.floor(Math.random() * 15)
+  }
   document.getElementById("stamid").innerHTML = stamina;
 
   //Re adjust Stamina based on character level
   let increments = 0;
   for (let chlevel = 0; chlevel < 21; chlevel++) {
-    increments = increments + 0.5;
+    increments = increments + 1;
   }
-  stamina = stamina * increments;
+
 
   document.getElementById("stamid").innerHTML = stamina;
   console.log("Random Stamina Generated" + " " + stamina);
 
   //Create Random Mana value
-  let mana = Math.floor(Math.random() * 20) * 10 + 100;
+  let mana = Math.floor(Math.random() * 15);
+  if(mana <= 3){
+    mana = Math.floor(Math.random() *  15)
+  }
   document.getElementById("manaid").innerHTML = mana;
 
   //Re adjust Mana based on character level
   let incrementm = 0;
   for (let chlevel = 0; chlevel < 21; chlevel++) {
-    incrementm = incrementm + 0.5;
+    incrementm = incrementm + 1;
   }
-  mana = mana * incrementm;
 
   document.getElementById("manaid").innerHTML = mana;
   console.log("Random Mana Generated" + " " + mana);
